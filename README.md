@@ -1,5 +1,7 @@
 # lame mp3 encoder browser ui
-simple browser user interface for the lame mp3 encoder
+simple browser user interface for the [lame mp3 encoder](http://lame.sourceforge.net/)
+
+![Lame mp3 encoder browser ui](img/lame-browser-ui-screenshot.png)
 
 ## How To
 - clone repository
@@ -9,11 +11,9 @@ simple browser user interface for the lame mp3 encoder
 - start browser and go to: localhost:3000
 
 # usage
-- select bitrate mode
-- select channel mode
-- set bitrate
-- select file and encode
-- the file will be uploaded to the server, encoded to mp3 and downloaded as zip file
+- select bitrate mode, select channel mode and set bitrate
+- select audio file and click the encode button
+- the file will be uploaded to the /uploads/ path, encoded to mp3 and downloaded as zip file in your /downloads/ folder
 
 # possible improvements
 - multiple file uploads
