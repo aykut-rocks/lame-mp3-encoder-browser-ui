@@ -1,0 +1,30 @@
+{
+  "name": "lame-mp3-encoder-browser-ui",
+  "version": "1.0.0",
+  "description": "simple browser user interface for the lame mp3 encoder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aykut-rocks/lame-mp3-encoder-browser-ui.git"
+  },
+  "keywords": [
+    "lame",
+    "mp3",
+    "encoder"
+  ],
+  "author": "Aykut Sensoy",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/aykut-rocks/lame-mp3-encoder-browser-ui/issues"
+  },
+  "homepage": "https://github.com/aykut-rocks/lame-mp3-encoder-browser-ui#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-zip": "^2.0.1",
+    "formidable": "^1.1.1",
+    "node-lame": "^1.0.6"
+  }
+}

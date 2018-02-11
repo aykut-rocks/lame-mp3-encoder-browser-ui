@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lame mp3 encoder browser ui</title>
+<link rel="stylesheet" href="css/lame-ui.css" />
+<h1>lame mp3 encoder browser ui</h1>
+<form enctype="multipart/form-data" action="/upload" method="post">
+    <fieldset>
+        <legend>Select Bitrate Mode</legend>
+        <input type="radio" name="bitrate-mode" value="cbr" checked /> CBR (Constant Bitrate)<br />
+        <input type="radio" name="bitrate-mode" value="vbr" /> VBR (Variable Bitrate)<br />
+        <input type="radio" name="bitrate-mode" value="abr" /> ABR (Average Bitrate)
+    </fieldset>
+    <fieldset>
+        <legend>Select Channel Mode</legend>
+        <select name="channel-mode">
+            <option value="j">Joint</option>
+            <option value="s">Stereo</option>
+            <option value="f">Mid-Side Stereo</option>
+            <option value="d">Dual-Mono</option>
+            <option value="m">Mono</option>
+        </select>
+    </fieldset>
+    <div class="flex-container">
+        <fieldset>
+            <legend>Set CBR Bitrate</legend>
+            <select name="cbr-quality">
+                <option value="320">Insane (320 kbit/s)</option>
+                <option value="256">Extreme (256 kbit/s)</option>
+                <option value="192">Standard (192 kbit/s)</option>
+                <option value="160">Medium (160 kbit/s)</option>
+                <option value="128">Low (128 kbit/s)</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Set VBR Bitrate</legend>
+            <select name="vbr-quality" disabled>
+                <option value="0">Extreme (~256 kbit/s)</option>
+                <option value="2">Standard (~192 kbit/s)</option>
+                <option value="4">Medium (~160 kbit/s)</option>
+                <option value="6">Low (~128 kbit/s)</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Set ABR Bitrate</legend>
+            <select name="abr-quality" disabled>
+                <option value="320">Insane (~320 kbit/s)</option>
+                <option value="256">Extreme (~256 kbit/s)</option>
+                <option value="192">Standard (~192 kbit/s)</option>
+                <option value="160">Medium (~160 kbit/s)</option>
+                <option value="128">Low (~128 kbit/s)</option>
+            </select>
+        </fieldset>
+    </div>
+    <fieldset>
+        <legend>Encode Audio File</legend>
+        <input name="audio" type="file" accept="audio/*" />
+        <input type="submit" value="Encode To MP3" disabled />
+    </fieldset>
+</form>
+<script src="js/lame-ui.js"></script>
